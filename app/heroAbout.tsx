@@ -52,7 +52,7 @@ export default function HeroAboutCon() {
         },
       });
       intentObserver.disable();
-      // animate to the new section
+      // animate to the new  section
       const gotoSection = contextSafe((index: number, direction: number) => {
         console.log("go to section called, direction:", direction);
         if (index >= sections.length && direction == 1) {
