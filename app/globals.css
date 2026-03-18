@@ -119,5 +119,5 @@ p {
 
 .card-wrapper:hover .card.outer{
   transform: rotateY(180deg);
-  transition: all 1s;
+  transition: all 4s;
 }

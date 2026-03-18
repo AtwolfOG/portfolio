@@ -1,17 +1,29 @@
 "use client"
 
-import { useGSAP } from "@gsap/react";
+import { useGSAP  } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import { useRef } from "react";
 
 export default function Services() {
   const containerRef = useRef<HTMLDivElement>(null)
-  useGSAP((context, contextSafe) => {
-    
-  })
+  useGSAP(() => {
+    const tl = gsap.timeline()
+    tl.to(".card-wrapper", { scale: 0.8, borderRadius: "50%"}, 0)
+    tl.to(".outer", { rotateY: "180deg"})
+    const scrollTrigger = ScrollTrigger.create({
+      trigger: containerRef.current,
+      animation: tl,
+      start: "top top",
+      end: "+=2000px",
+      scrub: 1,
+      pin: true,
+    })
+  }, {scope: containerRef})
   return (
-    <div className="h-dvh w-dvw flex items-center justify-center">
-      <div className="flex md:flex-row w-[300px] md:w-[90dvw] max-w-[1050px]  gap-y-7 gap-x-0  border border-b-amber-900">
+    <div ref={containerRef} className="h-dvh w-dvw flex items-center justify-center">
+      <div className="flex md:flex-row w-[300px] md:w-[90dvw] max-w-[1050px]  gap-y-7 gap-x-0">
         <Cards
           text={
             "Clean, responsive interfaces built for great user experience."
@@ -38,16 +50,18 @@ export default function Services() {
 
 function Cards({ text, src }: { text: string, src: string }) {
   return (
-    <div className="card-wrapper w-[300px]  aspect-7/10  border-yellow-500 md:w-[33.33%]">
-      <div className="card outer  perspective-near  transform-3d relative w-full aspect-7/10">
-        <Image
-          fill={true}
-          alt={"card"}
-          src={src}
-          className="image h-full relative backface-hidden"
-        />
-        <div className="inner h-full absolute top-[50%] left-[50%] origin-center -translate-x-[50%] rotate-y-180 text-2xl   -translate-z-10">
-          <p> {text}</p>
+    <div className="card-wrapper relative w-[300px]  aspect-7/10 md:w-[33.333333%] transform-3d overflow-hidden">
+      <div className="card outer  perspective-near transform-3d relative w-full aspect-7/10  ">
+        <div className="front">
+          <Image
+            fill={true}
+            alt={"card"}
+            src={src}
+            className="image h-full relative backface-hidden "
+          />
+        </div>
+        <div className="inner flex justify-center items-center absolute inset-0 origin-center bg-[#333] rotate-y-180 transform-3d backface-hidden">
+          <p className="max-w-[20ch] text-2xl! translate-z-10"> {text}</p>
         </div>
       </div>
     </div>
