@@ -126,7 +126,7 @@ export default function HeroAboutCon() {
     { scope: container }
   );
   return (
-    <div ref={container} className="h-dvh overflow-hidden">
+    <div ref={container} className="h-screen overflow-hidden">
       <section className="fixed top-0 ">
         <div className="outer h-dvh w-dvw overflow-hidden  invisible">
           <div className="inner h-dvh ">

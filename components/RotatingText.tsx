@@ -15,7 +15,7 @@ export default function RotatingText({ texts }: { texts: string[] }) {
     <motion.span
       layout
       transition={{ layout: { duration: 0.2, ease: "easeInOut" } }}
-      className="inline-flex overflow-hidden border"
+      className="inline-flex overflow-hidden"
     >
       <AnimatePresence mode="wait">
         <motion.span
@@ -25,6 +25,7 @@ export default function RotatingText({ texts }: { texts: string[] }) {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, ease: "easeInOut" }}
           key={index}
+          className="text-(--destructive)"
         >
           {texts[index]}
         </motion.span>

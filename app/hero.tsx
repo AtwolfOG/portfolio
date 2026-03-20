@@ -13,11 +13,11 @@ export default function Hero() {
           </header>
         </div>
         <div className="size-[250px] relative rounded-full overflow-hidden">
-          <Image src={"/images/pic.jpg"} alt="Ayokunle" fill />
+          <Image src={"/images/pic.jpeg"} alt="Ayokunle" fill />
         </div>
       </div>
-      <motion.h2 className="inline hero-subtext" layout="size">
-        <span>Hi, I am Ayokunle Adedapo and i build </span>{" "}
+      <motion.h2 className="inline hero-subtext my-5" layout="size">
+        <span>I am Ayokunle Adedapo and i build </span>{" "}
         <RotatingText
           texts={["scalable", "dynamic", "responsive", "creative"]}
         />
@@ -26,4 +26,3 @@ export default function Hero() {
     </div>
   );
 }
-["Scaable", "Dynamic", "Responsive", "Creative"];
