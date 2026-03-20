@@ -54,8 +54,8 @@ export default function Services() {
     })
   }, {scope: containerRef})
   return (
-    <div ref={containerRef} className="h-screen w-screen flex items-center border-green-700 border justify-center">
-      <div className="flex flex-col md:flex-row w-[300px] md:w-[90dvw] aspect-7/10 md:aspect-21/10 border-2 max-w-[1050px]  gap-y-7 gap-x-0">
+    <div ref={containerRef} className="h-screen w-screen flex items-center justify-center">
+      <div className="flex flex-col md:flex-row w-[300px] md:w-[90dvw] aspect-7/10 md:aspect-21/10 max-w-[1050px]  gap-y-7 gap-x-0">
         <Cards
           text={
             "Clean, responsive interfaces built for great user experience."
