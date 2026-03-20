@@ -34,6 +34,13 @@ const projectDetails: projectType[] = [
         description: "This is a frontend demo for selling healthy made delicious cake",
         link: "https://ayokunle-cake-site.netlify.app/",
         lang: ["Javascript", "HTML", "CSS", "TypeScript"]
+    },
+    {
+        src: "/images/sable_omega.png",
+        title: "Sable Omega",
+        description: "This is a landing page to seamlessly generate, customize, and perfect your designs with cutting-edge AI technology",
+        link: "https://fun-sable-omega.vercel.app/",
+        lang: ["Javascript", "HTML", "CSS", "React"]
     }
 ]
 
