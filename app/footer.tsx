@@ -6,7 +6,7 @@ const Arrow: JSX.Element = <svg xmlns="http://www.w3.org/2000/svg" height="24px"
 
 export default function Footer(){
     return(
-        <footer className="flex flex-col h-[90vh] text-[hsl(0,0,70%)] max-h-[600px] md:max-h-[500px] bg-background mt-10 px-5 pt-10 pb-20 md:px-20 md:py-10 gap-16">
+        <footer className="flex flex-col text-[hsl(0,0,70%)] max-h-[600px] md:max-h-[500px] bg-background mt-10 px-5 pt-10 pb-20 md:px-20 md:py-10 gap-16">
             <div className="flex items-center justify-between">
                 <p>© 2026</p>
                 <div className="flex gap-3 items-center"><p className="">BACK TO TOP</p><div onClick={handleClick} className="bounce text-xl border rounded-full bg-[hsl(0,0,20%)] p-4">{Arrow}</div></div>
