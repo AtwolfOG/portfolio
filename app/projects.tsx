@@ -55,7 +55,7 @@ export function ProjectsCard({src, title, description, link, lang, additional}: 
             <div className="project-image-container w-[95vw] relative max-w-[450px] aspect-video ">
                 <Image src={src} alt={title} fill/>
             </div>
-            <div className="h-60 px-4 z-10 flex flex-col items-center justify-center gap-4 bg-[hsla(0,0,0,1)]">
+            <div className="h-65 md:h-60 px-4 z-10 flex flex-col items-center justify-center gap-4 bg-[hsla(0,0,0,1)]">
                 <div>
                     <h2 className="my-2">{title}</h2>
                     <p className="my-2 opacity-70">{description}</p>
