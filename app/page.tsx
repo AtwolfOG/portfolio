@@ -31,14 +31,18 @@ export default function Home() {
     };
   }, []);
   return (
-    isLoaded?
     <>
-      <Bg />
-      <HeroAboutCon />
-      <Services/> 
-      <Projects/>
-      <Footer/>
-    </> :
-    <Loader/>
+      {/* Always in DOM so assets load immediately */}
+      <div style={{ visibility: isLoaded ? 'visible' : 'hidden' }}>
+        <Bg />
+        <HeroAboutCon />
+        <Services />
+        <Projects />
+        <Footer />
+      </div>
+
+      {/* Overlay loader until ready */}
+      {!isLoaded && <Loader />}
+    </>
   );
 }
