@@ -1,8 +1,8 @@
-# 👋 Hi, I'm AtwolfOG
+# 👋 Hi, I'm Atwolf
 
 Welcome to the source code of my personal portfolio — a space where I showcase who I am, what I build, and how to reach me.
 
-🔗 **Live Site:** [atwolfog.vercel.app](https://atwolfog.vercel.app) *(update with your live URL)*
+🔗 **Live Site:** [atwolf.vercel.app](https://atwolf.vercel.app) *(update with your live URL)*
 
 ---
 
