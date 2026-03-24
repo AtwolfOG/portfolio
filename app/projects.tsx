@@ -32,7 +32,7 @@ const projectDetails: projectType[] = [
         src: "/images/cake.png",
         title: "Cake Ahoh",
         description: "This is a frontend demo for selling healthy made delicious cake",
-        link: "https://cakeahoh.app/",
+        link: "https://cakeahoh.netlify.app/",
         lang: ["Javascript", "HTML", "CSS", "TypeScript"]
     },
     {
